@@ -4,6 +4,8 @@
 
 1. Modify the `overlay-harbor-ldaps-cert.yaml` overlay file and set your LDAPS/CA certificate for the `ca.crt` parameter under the `harbor-ldaps-cert` secret.
 
+    >**Important note: the overlay file contains an extra empty line at the end. This is part of the `ca.crt` value and you must keep this line. Otherwise, Harbor will run into issues reading the certificate.**
+
 2. Create a secret from the `overlay-harbor-ldaps-cert.yaml` file:
 
     ```bash
