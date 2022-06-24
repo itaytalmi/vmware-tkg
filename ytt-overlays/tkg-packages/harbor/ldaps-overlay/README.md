@@ -30,6 +30,6 @@
 
 5. Confirm that the package has sucessfully reconciled.
 
-  ```bash
-  kubectl get app harbor -n tkg-packages
-  ```
+    ```bash
+    kubectl get app harbor -n tkg-packages
+    ```
