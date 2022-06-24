@@ -6,7 +6,7 @@
 
     >**Important note: the overlay file contains an extra empty line at the end. This is part of the `ca.crt` value and you must keep this line. Otherwise, Harbor will run into issues reading the certificate.**
 
-2. Create a secret from the `overlay-harbor-ldaps-cert.yaml` file:
+2. On your TKG cluster, create a secret from the `overlay-harbor-ldaps-cert.yaml` file:
 
     ```bash
     kubectl create secret generic overlay-harbor-ldaps-cert -n tkg-packages \
@@ -22,15 +22,13 @@
     -n tkg-packages
     ```
 
-4. Trigger reconcilation for the package.
+4. Trigger reconcilation for the package and wait for the package to reconcile.
 
    ```bash
    kctrl app kick -a harbor -n tkg-packages -y
    ```
 
-5. Wait for the package to reconcile.
-
-  Confirm that the app has been successfully reconciled.
+5. Confirm that the package has sucessfully reconciled.
 
   ```bash
   kubectl get app harbor -n tkg-packages
