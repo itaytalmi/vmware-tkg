@@ -30,7 +30,7 @@ ingress:
       -----BEGIN CERTIFICATE-----
       MIIFiDCCBHCgAwIBAgITUwAAAI0F..........
       -----END CERTIFICATE-----
-    key: |- # Set your private key
+    key: |- # Set your private key below
       -----BEGIN RSA PRIVATE KEY-----
       MIIEpAIBAAKCAQEAsxCU+mvz0Tu4SbD........
       -----END RSA PRIVATE KEY-----
@@ -67,7 +67,7 @@ kibana:
       -----BEGIN CERTIFICATE-----
       MIIFiDCCBHCgAwIBAgITUwAAAI0F..........
       -----END CERTIFICATE-----
-    key: |- # Set your private key
+    key: |- # Set your private key below
       -----BEGIN RSA PRIVATE KEY-----
       MIIEpAIBAAKCAQEAsxCU+mvz0Tu4SbD........
       -----END RSA PRIVATE KEY-----
