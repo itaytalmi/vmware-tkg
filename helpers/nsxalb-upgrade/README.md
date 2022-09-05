@@ -21,17 +21,17 @@ Then navigate to `Administration` > `Controller` > `Software` and make sure ther
 ## Update TKG Configuration
 
 Since the NSX ALB controller version has changed, you must update the AKO Operator as well as the AKODeploymentConfig resources in TKG.
-You can use the `update-nsxalb-version.sh` shell script in this directory to do so.
+You can use the `tkg-update-nsxalb-version.sh` shell script in this directory to do so.
 Execute the script using the following syntax:
 
 ```bash
-./update-nsxalb-version.sh <TKG_MGMT_CLUSTER_NAME> <NSXBALB_CONTROLLER_VERSION>
+./tkg-update-nsxalb-version.sh <TKG_MGMT_CLUSTER_NAME> <NSXBALB_CONTROLLER_VERSION>
 ```
 
 For example:
 
 ```bash
-./update-nsxalb-version.sh tkg-mgmt-cls '21.1.4'
+./tkg-update-nsxalb-version.sh tkg-mgmt-cls '21.1.4'
 ```
 
 Example output:
