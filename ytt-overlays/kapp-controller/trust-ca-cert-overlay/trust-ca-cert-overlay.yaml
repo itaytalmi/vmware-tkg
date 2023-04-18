@@ -8,6 +8,14 @@ spec:
     spec:
       containers:
       #@overlay/match by="name"
+      - name: kapp-controller-sidecarexec
+        volumeMounts:
+        #@overlay/append
+        - mountPath: /etc/ssl/certs/ca-certificates.crt
+          name: ca-cert
+          readOnly: true
+          subPath: ca.crt
+      #@overlay/match by="name"
       - name: kapp-controller
         volumeMounts:
         #@overlay/append
@@ -31,7 +39,6 @@ type: Opaque
 stringData:
   ca.crt: |
     -----BEGIN CERTIFICATE-----
-    MIIDezCCAmOgAwIBAgIQXkgF/C0+oqdNcapUYpE8CTANBgkqhkiG9w0BAQsFADBP
-    MRQwEgYKCZImiZPy......................
+    MIIDdzCCAl+gAwIBAgIQH4wNdThKCJpOv8K1LzP7sDANBgkqhkiG9w0BAQsFADBO
+    MRUwEwYKCZImiZPyLGQ....
     -----END CERTIFICATE-----
-    
