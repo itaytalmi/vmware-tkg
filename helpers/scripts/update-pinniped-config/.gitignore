@@ -1,0 +1,5 @@
+pinniped-addon-values.yaml*
+*.cer
+*.crt
+*.key
+*.pem
