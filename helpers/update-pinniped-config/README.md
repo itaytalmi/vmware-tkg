@@ -45,8 +45,8 @@ The shell scripts in this directory can be used for updating the Pinniped/Dex pa
    For example:
 
    ```yaml
-   ...
-   dex:
+    ...
+    dex:
     app: dex
     create_namespace: true
     namespace: tanzu-system-auth
@@ -75,17 +75,17 @@ The shell scripts in this directory can be used for updating the Pinniped/Dex pa
           name: pinniped
           secret: dummyvalue
         ldap:
-          host: terasky.demo:636
+          host: cloudnativeapps.cloud:636
           insecureNoSSL: false
           startTLS: null
           rootCA: null
           rootCAData: LS0tLS1CRUdJTiBDRVJUSUZJQ0F....
-          bindDN: CN=tkg-ldaps,OU=ServiceAccount,OU=Terasky,DC=terasky,DC=demo
-          BIND_PW_ENV_VAR: VMware1!
+          bindDN: CN=tkg-ldaps,OU=ServiceAccount,OU=cloudnativeapps,DC=cloudnativeapps,DC=cloud
+          BIND_PW_ENV_VAR: YourP@ssw0rd!@#
           usernamePrompt: LDAP Username
           insecureSkipVerify: false
           userSearch:
-          baseDN: DC=terasky,DC=demo
+          baseDN: DC=cloudnativeapps,DC=cloud
           filter: (objectClass=person)
           username: sAMAccountName
           idAttr: DN
@@ -93,14 +93,13 @@ The shell scripts in this directory can be used for updating the Pinniped/Dex pa
           nameAttr: sAMAccountName
           scope: sub
           groupSearch:
-          baseDN: DC=terasky,DC=demo
+          baseDN: DC=cloudnativeapps,DC=cloud
           filter: (objectClass=group)
           nameAttr: cn
           scope: sub
           userMatchers:
           - userAttr: DN
               groupAttr: member
-   ...
    ```
 
 4. Once done, execute the `02-update-pinniped-config.sh` script to apply the updated configuration and reconcile the Pinniped package. Use the following syntax:
