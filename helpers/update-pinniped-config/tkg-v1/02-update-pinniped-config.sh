@@ -78,5 +78,5 @@ rm -rf ~/.config/tanzu/pinniped/*
 # Cleanup temporary files
 rm "$PINNIPED_ADDON_VALUES"
 
-echo ""=
+echo ""
 echo "Done"

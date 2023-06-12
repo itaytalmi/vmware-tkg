@@ -51,7 +51,7 @@ kubectl get secret -n tkg-system "$TKG_MGMT_CLUSTER_NAME-pinniped-addon" -o json
 
 # Create a backup of the original Pinniped configuration
 echo "Creating a backup of the original Pinniped configuration"
-cp "$PINNIPED_ADDON_VALUES" "$PINNIPED_ADDON_VALUES.orig_bak"
+cp "$PINNIPED_ADDON_VALUES" "$PINNIPED_ADDON_VALUES.orig_bak_$(date +%s)"
 
 echo ""
 echo "Done"
